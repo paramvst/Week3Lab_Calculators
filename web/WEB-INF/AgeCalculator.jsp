@@ -21,7 +21,7 @@
             ${message}
             
             <nav>
-                <a href ="\arithmetic">Arithmetic Calculator</a>
+                <a href ="arithmetic">Arithmetic Calculator</a>
             </nav>
               
     </body>

@@ -14,16 +14,18 @@
     <body>
         <h1>Arithmetic Calculator</h1>
         <form action="arithmetic" method="post">
-            First: <input type="int" name="${first_name}"><br>
-            Second: <input type="int" name="${last_name}"><br>
-            <input type="radio" name
-            <input type="submit" value="Age next birthday">
+            First: <input type="int" name="first" value="${first}"><br>
+            Second: <input type="int" name="second" value="${second}"><br>
+            <input type="submit" value="+">
+            <input type="submit" value="-">
+            <input type="submit" value="*">
+            <input type="submit" value="%">
         </form>
             
             Result: ${message}
             
             <nav>
-                <a href ="\age">Arithmetic Calculator</a>
+                <a href ="age">Age Calculator</a>
             </nav>
               
     </body>
