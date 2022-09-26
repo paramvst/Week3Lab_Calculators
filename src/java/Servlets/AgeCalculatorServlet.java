@@ -42,7 +42,10 @@ public class AgeCalculatorServlet extends HttpServlet {
             try
             {
                 ageInt = Integer.parseInt(age); 
+                if(ageInt >= 0)
                 message += (++ageInt);
+                else
+                    message = "Your age can't be negative.";
             }
             catch(Exception e)
             {

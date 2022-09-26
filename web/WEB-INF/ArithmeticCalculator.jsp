@@ -22,6 +22,7 @@
             <input type="submit" name="operator" value="%">
         </form>
             
+            
             Result: ${message}
             
             <nav>

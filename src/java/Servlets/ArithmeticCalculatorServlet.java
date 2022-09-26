@@ -33,32 +33,37 @@ public class ArithmeticCalculatorServlet extends HttpServlet {
         int firstInt = 0, secondInt = 0;
         String operator = request.getParameter("operator");
         
+        if(first == null || second == null || first.equals("") || second.equals(""))
+        message = "invalid";
         try
         {
             firstInt = Integer.parseInt(first);
-            secondInt = Integer.parseInt(second);             
+            secondInt = Integer.parseInt(second);       
+            
+            
+            if (operator.equals("+"))
+            {
+                message = "" + (firstInt + secondInt);
+            }
+            else if (operator.equals("-"))
+            {
+                message = "" + (firstInt - secondInt);
+            }
+            else if (operator.equals("*"))
+            {
+                message = "" + (firstInt * secondInt);
+            }
+            else if (operator.equals("%"))
+            {
+                message = "" + (firstInt % secondInt);
+            }
         }
         catch (Exception ex)
         {
             message = "invalid";
         }
         
-        if (operator.equals("+"))
-        {
-            message = "" + (firstInt + secondInt);
-        }
-        else if (operator.equals("-"))
-        {
-            message = "" + (firstInt - secondInt);
-        }
-        else if (operator.equals("*"))
-        {
-            message = "" + (firstInt * secondInt);
-        }
-        else if (operator.equals("%"))
-        {
-            message = "" + (firstInt % secondInt);
-        }
+        
         request.setAttribute("first", first);
         request.setAttribute("second", second);
         request.setAttribute("operator", operator);        
